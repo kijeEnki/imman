@@ -41,6 +41,7 @@ select {
 html,
 body {
     height: 100%;
+    accent-color: #4682b4;
 }
 
 body {
