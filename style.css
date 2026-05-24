@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
 :root {
     --body-bg: #fff;
     --bg: #f0f8ff;
@@ -5,7 +7,8 @@
     --dotted: #708090;
     --fg: #2f4f4f;
 
-    --font-text: Charter, Charis, "Charis SIL", "Georgia Pro", Georgia, 'Times New Roman', Times, serif;
+    /* --font-text: Charter, Charis, "Charis SIL", "Georgia Pro", Georgia, 'Times New Roman', Times, serif; */
+    --font-text: "Source Serif 4", Charter, Charis, "Charis SIL", "Georgia Pro", Georgia, 'Times New Roman', Times, serif;
     /* --font-display: "Futura PT", "Futura", "Trebuchet MS", Trebuchet, "Gill Sans Nova", "Gill Sans", "Gill Sans MT", sans-serif; */
     --font-display: var(--font-text);
 }
@@ -22,6 +25,7 @@
 :root {
     font-family: var(--font-text);
     font-size: 16px;
+    font-optical-sizing: auto;
     color: var(--fg);
     text-wrap: wrap;
     hyphens: auto;
@@ -76,7 +80,7 @@ h2 {
 
 h1 {
     font-size: 1.5rem;
-    font-weight: lighter;
+    font-weight: 300;
 }
 
 h2 {
