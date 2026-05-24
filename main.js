@@ -181,6 +181,7 @@ const runButton = document.querySelector("button#run-script");
 
 runButton.addEventListener("click", () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.width = ctx.width; // to reset all properties
     if (program.length == 0) {
         drawIfEmpty();
     } else {
