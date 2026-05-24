@@ -104,13 +104,16 @@ input,
 select {
     width: 20ch;
     border: solid 1px var(--dotted);
-    text-align: center;
 }
 
 input[type=number] {
     border-radius: 1rem;
     width: 5.5ch;
-    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input {
+    text-align: center;
 }
 
 select {
