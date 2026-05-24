@@ -250,7 +250,7 @@ export const blockRegistry = {
     },
     "path_round4_rect": {
         label: "Add ${w}×${h} rectangle starting at (${x}, ${y}) with rounded corners of radii ${r1}, ${r2}, ${r3}, ${r4}",
-        short_label: "Add round rect 4 r",
+        short_label: "Add round rect w/ 4 radii",
         category: "path_geometry",
         params: {
             w: {type: "number"}, h: {type: "number"},
