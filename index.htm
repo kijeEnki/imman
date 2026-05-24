@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Web-based image manipulation tool</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="famfamfam-silk.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="preview-area">
+            <h1>Image manipulator</h1>
+            <h2><i class="icon eye"></i> The <strong>preview</strong> area</h2>
+            <div class="canvas-container">
+                <canvas id="result-image"></canvas>
+            </div>
+            <p>Image displayed at <span id="zoom">???</span>% of its actual resolution.</p>
+            <p><small>(The canvas you see here is resized to fit on this page. The actual resulting image will be the
+                    size you’d expect it to be. If you see a checkerboard behind the drawn image, that means the image
+                    is transparent.)</small></p>
+            <div>
+                <span>View options:</span>
+                <select name="image-display" id="image-display">
+                    <option value="px">Pixelated preview</option>
+                    <option value="smooth">Smooth preview</option>
+                </select>
+            </div>
+            <div>
+                <span>Save options:</span>
+                <select name="format-select" id="format-select">
+                    <option value="png">Save as PNG</option>
+                    <option value="jpeg">Save as JPEG (opaque)</option>
+                    <option value="gif">Save as GIF</option>
+                </select>
+                <button id="export"><i class="icon disk"></i> Export</button>
+            </div>
+        </div>
+        <div class="code-area">
+            <h2><i class="icon script"></i> The <strong>code</strong> area</h2>
+            <button id="run-script"><i class="icon lightning_go"></i> Run</button>
+            <button id="save-script"><i class="icon script_save"></i> Save script</button>
+            <button id="load-script"><i class="icon computer_edit"></i> Load script</button>
+            <hr>
+            <select name="block-list" id="block-list" disabled>
+                <option disabled selected><em>Select block…</em></option>
+            </select>
+            <button disabled id="add-block"><i class="icon add"></i> Add block</button>
+            <div id="code">
+                <ol id="listProgram"></ol>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

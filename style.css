@@ -1,0 +1,142 @@
+:root {
+    --body-bg: #fff;
+    --bg: #f0f8ff;
+    --code-bg: #d0e0f0;
+    --dotted: #708090;
+    --fg: #2f4f4f;
+
+    --font-text: Charter, Charis, "Charis SIL", "Georgia Pro", Georgia, 'Times New Roman', Times, serif;
+    /* --font-display: "Futura PT", "Futura", "Trebuchet MS", Trebuchet, "Gill Sans Nova", "Gill Sans", "Gill Sans MT", sans-serif; */
+    --font-display: var(--font-text);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --body-bg: #000;
+        --bg: #000810;
+        --code-bg: #001020;
+        --fg: #f8f8ff;
+    }
+}
+
+:root {
+    font-family: var(--font-text);
+    font-size: 16px;
+    color: var(--fg);
+    text-wrap: wrap;
+    hyphens: auto;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+    font-size: 12px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: var(--body-bg);
+    margin: 0;
+}
+
+div.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+    align-items: stretch;
+    gap: 1rcap;
+    max-width: 120rcap;
+    margin: auto;
+    height: calc(100% - 2rcap);
+}
+
+div.preview-area,
+div.code-area {
+    background-color: var(--bg);
+    border-radius: 0.25rem;
+    width: 50rcap;
+    padding: 1rcap;
+    margin: 1rcap;
+    max-height: calc(100% - 4rcap);
+}
+
+h1,
+h2 {
+    font-stretch: condensed;
+    padding: 0.25rem;
+    font-family: var(--font-display);
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: normal;
+    border-bottom: 1px dotted var(--dotted);
+}
+
+div.canvas-container {
+    overflow-y: auto;
+    max-height: 60vh;
+}
+
+canvas {
+    background-image: url("checkerboard.svg");
+    width: 100%;
+}
+
+hr {
+    border: none;
+    border-top: solid 0.25rex var(--dotted);
+}
+
+input,
+select {
+    width: 20ch;
+    border: solid 1px var(--dotted);
+    text-align: center;
+}
+
+input[type=number] {
+    border-radius: 1rem;
+    width: 5.5ch;
+    -moz-appearance: textfield;
+}
+
+select {
+    text-overflow: ellipsis;
+}
+
+ol {
+    height: 50vh;
+    overflow-y: scroll;
+    background-color: var(--code-bg);
+    border-radius: 0.25rem;
+    scrollbar-width: thin;
+    padding: 1rem 3rem;
+}
+
+button {
+    padding: 0.5ch 0.5ch;
+    break-before: avoid;
+    break-after: avoid;
+}
+
+textarea {
+    display: block;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+}
